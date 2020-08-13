@@ -1,0 +1,9 @@
+<h1>The World Needs More Cocktails!
+  <br>Create One Below:</h1>
+<br>
+<br>
+<%= form_for(@cocktail) do |f|%>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.submit %>
+<% end %>

@@ -1,0 +1,11 @@
+<h1>Here are our cocktails</h1>
+<table>
+ <% @cocktails.each do |cocktail| %>
+      <tr>
+
+        <td><%= link_to cocktail.name, cocktail_path(cocktail) %>
+      </tr>
+    <% end %>
+</table>
+
+<%= link_to 'Create to Cocktail', new_cocktail_path, class: "btn btn-primary" %>

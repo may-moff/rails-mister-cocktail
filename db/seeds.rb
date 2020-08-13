@@ -14,6 +14,14 @@ Ingredient.destroy_all
 
   25.times do
     ingredient = Ingredient.create(
-    name:Faker::Food.ingredient
+    name:Faker::Food.spice
+    )
+  end
+
+Cocktail.destroy_all
+
+ 15.times do
+    cocktail = Cocktail.create(
+    name:Faker::Superhero.name
     )
   end
