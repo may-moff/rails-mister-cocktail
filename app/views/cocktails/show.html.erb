@@ -7,8 +7,7 @@
 
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
       <h3>Cocktail: <%= @cocktail.name %></h3>
-      <p>Short description here!</p>
-      </div>
+  </div>
 
   <p>
     <% @cocktail.doses.each do |dose| %>
@@ -17,13 +16,15 @@
       <i class="fas fa-trash"></i>
   </p>
     <% end %>
-  </div>
-</div>
 
-  <h3>Anything missing?</h3>
+   <h3>Anything missing?</h3>
   <%= link_to 'Add an Ingredient', new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
 
   <h3>Bring me back to overview</h3>
 
   <%= link_to 'Back to Cocktails', cocktails_path, class: "btn btn-primary" %>
+   </div>
+</div>
+
+
 </div>

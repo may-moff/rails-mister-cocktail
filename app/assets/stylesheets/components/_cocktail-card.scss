@@ -1,11 +1,11 @@
 .cocktail-card {
   overflow: hidden;
-  background: red;
+  background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .card-title > img {
-  height: 200px;
+  height: 300px;
   // width: 50%;
   object-fit: cover;
 }
@@ -14,13 +14,14 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
-  $card-title: "Bungee Inline", cursive;
+  font-family: $card-title;
 }
 
 .card-title p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
+  font-family: $card-title;
 }
 
 
