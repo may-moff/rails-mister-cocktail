@@ -1,16 +1,29 @@
-<%= link_to 'Back to Cocktails', cocktails_path, class: "btn btn-primary" %>
+<div class="container">
+  <h1>Cocktail: <%= @cocktail.name %></h1>
+  <br>
 
-<h1>Cocktail: <%= @cocktail.name %> <br>
-Anything missing?</h1>
-<br>
-<h2>Add an ingredient below:</h2>
+ <div class="cocktail-card">
+  <div class="card-title">
 
-<%= link_to 'Ingredients', new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
-<table>
-  <% @cocktail.doses.each do |dose| %>
-  <tr>
-    <td><%= dose.ingredient.name %> </td>
-    <td><%= dose.description %> | <%= link_to "Delete", dose, method: :delete, data: { confirm: "Are you sure? "}%> </td>
-  </tr>
-  <% end %>
-</table>
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <h3>Cocktail: <%= @cocktail.name %></h3>
+      <p>Short description here!</p>
+      </div>
+
+  <p>
+    <% @cocktail.doses.each do |dose| %>
+      <p> Ingredient: <%= dose.ingredient.name %> </p>
+      <p> Amount: <%= dose.description %> | <%= link_to "Delete", dose, method: :delete, data: { confirm: "Are you sure? "}%> </p>
+      <i class="fas fa-trash"></i>
+  </p>
+    <% end %>
+  </div>
+</div>
+
+  <h3>Anything missing?</h3>
+  <%= link_to 'Add an Ingredient', new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+
+  <h3>Bring me back to overview</h3>
+
+  <%= link_to 'Back to Cocktails', cocktails_path, class: "btn btn-primary" %>
+</div>

@@ -1,11 +1,24 @@
-<h1>Here are our cocktails</h1>
-<table>
- <% @cocktails.each do |cocktail| %>
-      <tr>
 
-        <td><%= link_to cocktail.name, cocktail_path(cocktail) %>
-      </tr>
+
+<div class="banner" style="background-image: url('<%= image_path 'banner.jpg' %>')">
+  <div class="banner-content">
+    <h1>Here are our Super-Cocktails</h1>
+    <%= link_to 'Create new Cocktail', new_cocktail_path, class: "btn btn-primary" %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card" style="background-image: url('<%= image_path 'light1.jpg' %>')">
+          <div class="card-description">
+              <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
+          </div>
+        </div>
+      </div>
     <% end %>
-</table>
+  </div>
+</div>
 
-<%= link_to 'Create to Cocktail', new_cocktail_path, class: "btn btn-primary" %>
+
