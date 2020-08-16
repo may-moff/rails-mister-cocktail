@@ -2,7 +2,8 @@
 
 <div class="banner" style="background-image: url('<%= image_path 'banner.jpg' %>')">
   <div class="banner-content">
-    <h1>Here are our Super-Cocktails</h1>
+    <h1>It's Cocktail Time!</h1>
+    <p><strong>Looking for a Recipe? Check out our Amazing Cocktails below!</strong></p>
     <%= link_to 'Create new Cocktail', new_cocktail_path, class: "btn btn-primary" %>
   </div>
 </div>
@@ -10,9 +11,9 @@
 <div class="container">
   <div class="row">
     <% @cocktails.each do |cocktail| %>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card" style="background-image: url('<%= image_path 'light1.jpg' %>')">
-          <div class="card-description">
+      <div class="col-12 col-md-6 col-lg-3 pt-3 pb-2">
+        <div class="card-banner" style="background-image: url('<%= image_path 'light1.jpg' %>')">
+          <div class="card-banner-description">
               <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
           </div>
         </div>
